@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <div class="weather-container">
+            <h1>Weather App</h1>
+            
+            <form id="searchForm" class="search-form">
+                <input
+                    type="text"
+                    id="cityInput"
+                    placeholder="Enter city name..."
+                    class="search-input"
+                    required
+                />
+                <button type="submit" class="search-button">
+                    Search
+                </button>
+            </form>
+
+            <div id="loading" class="loading" style="display: none;">Loading...</div>
+            
+            <div id="error" class="error" style="display: none;"></div>
+            
+            <div id="weatherCard" class="weather-card" style="display: none;">
+                <div class="weather-header">
+                    <h2 id="cityName"></h2>
+                    <div class="weather-icon">
+                        <img id="weatherIcon" src="" alt="" />
+                    </div>
+                </div>
+                
+                <div class="temperature">
+                    <span id="tempValue" class="temp-value"></span>
+                    <p id="weatherDescription" class="weather-description"></p>
+                </div>
+                
+                <div class="weather-details">
+                    <div class="detail-item">
+                        <span class="label">Feels like</span>
+                        <span id="feelsLike" class="value"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Humidity</span>
+                        <span id="humidity" class="value"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Wind Speed</span>
+                        <span id="windSpeed" class="value"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Pressure</span>
+                        <span id="pressure" class="value"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="demoNotice" class="demo-notice" style="display: none;">
+                <p>📝 <strong>Demo Mode:</strong> To use real weather data, get a free API key from <a href="https://openweathermap.org/api" target="_blank" rel="noopener noreferrer">OpenWeatherMap</a> and replace the API_KEY in script.js.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
