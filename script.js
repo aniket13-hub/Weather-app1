@@ -1,5 +1,3 @@
-const API_KEY = 'e201d7ae94d6c153a4ffe8d0b4c207c3';
-const API_URL = 'https://api.openweathermap.org/data/2.5/weather';
 
 // Demo data for when API key is not available
 const demoWeather = {
